@@ -187,3 +187,18 @@ top:4em;
 .leg-r{
     right:10em;
 }
+.leg-l:before,
+.leg-r:before{
+    position:absolute;
+    content:"";
+    background-color: #ffffff;
+    height:1.37em;
+    width:1.75em;
+    top:1.12em;
+    left:1.12em;
+}
+@media screen and (max-width:500px){
+    .container{
+        font-size:14px;
+    }
+}
