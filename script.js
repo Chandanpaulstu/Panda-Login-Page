@@ -14,3 +14,20 @@ let normalHandStyle = () =>{
 handL.style.cssText="height:2.81em;top:8.4em;transform:rotate(0deg);";
 handR.style.cssText="height:2.81em;top:8.4em;transform:rotate(0deg);";
 };
+//after clicking on the username input
+usernameRef.addEventListener("focus", () => {
+    eyeL.style.cssText="Left:0.75em; top:1.12em;"
+    eyeR.style.cssText="right:0.75em; top:1.12em;";
+    normalHandStyle();});
+//after clicking on the password input
+    passwordRef.addEventListener("focus", () => {
+    handL.style.cssText="height:6.56em;top:3.87em;left:11.75em;transform:rotate(-155deg);";
+    handR.style.cssText="height:6.56em;top:3.87em;right:11.75em;transform:rotate(155deg);";
+    normalEyeStyle();});
+//when clicked outside username and password input
+document.addEventListener("click", (e) => {
+    let clickedElem=e.target;
+    if(clickedElem !=usernameRef && clickedElem != passwordRef){
+        normalEyeStyle();
+        normalHandStyle();  
+    }});
